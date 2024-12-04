@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent sizing */
+    font-family: outfit;
+  }
+  
+  body {
+    background-color: olivedrab;
+    padding: 0 10px;
+    font-size: 16px;
+  }
+  
+  nav {
+    background-color: rgb(0, 90, 0);
+    margin-bottom: 50px;
+  }
+  
+  .heading {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+  
+  .input-area {
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  input {
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid rgb(0, 90, 0);
+    color: white;
+    font-weight: 900;
+    background-color: rgb(0, 90, 0);
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    max-width: 700px;
+    border: 0.5px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+  }
+  
+  th {
+    font-size: 20px;
+    text-align: start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  th:nth-child(4) {
+    text-align: center;
+  }
+  
+  tr.border-bottom td {
+    border-bottom: 1pt dashed black;
+  }
+  
+  tbody {
+    padding: 3px;
+    font-size: 15px;
+  }
+  
+  td {
+    padding: 5px;
+  }
+  
+  .action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .btn-completed, .btn-remove {
+    text-decoration: none;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .heading {
+      font-size: 24px; /* Smaller heading on mobile */
+    }
+  
+    input {
+      width: 80%; /* Smaller input width on mobile */
+    }
+  
+    .btn {
+      width: 80px; /* Smaller button on mobile */
+    }
+  
+    table {
+      width: 100%; /* Make table full width */
+      font-size: 14px; /* Reduce table font size */
+    }
+  
+    th, td {
+      padding: 8px; /* Increase padding for touch-friendly design */
+    }
+  
+    .action {
+      flex-direction: column; /* Stack action buttons vertically on mobile */
+      gap: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .heading {
+      font-size: 18px; /* Even smaller font for very small screens */
+    }
+  
+    input {
+      width: 100%; /* Full width input */
+    }
+  
+    .btn {
+      width: 90px; /* Adjust button width */
+    }
+  
+    table {
+      font-size: 12px; /* Further reduce table font size for small screens */
+    }
+  
+    .action {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  
