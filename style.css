@@ -1,163 +1,210 @@
+
+/* Navigation bar styling */
+nav {
+  background-color: rgb(0, 90, 0); /* Color for the navigation background */
+  width: 100%; /* Ensure it spans the full width of the page */
+  padding: 7px 0; /* Add spacing inside the nav */
+  margin: 15px auto; /* Remove any default margins */
+  position: relative; /* Ensure it stays in place */
+}
+
+/* Styling for the title inside the nav */
+.heading {
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Ensure it behaves like a block-level element */
+}
+
+
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensure consistent sizing */
-    font-family: outfit;
-  }
-  
-  body {
-    background-color: olivedrab;
-    padding: 0 10px;
-    font-size: 16px;
-  }
-  
-  nav {
-    background-color: rgb(0, 90, 0);
-    margin-bottom: 50px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif; /* Ensure font family is correctly applied */
+}
+
+body {
+  font-size: 16px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  height: 100vh; /* Full height of the viewport */
+  background-color: olivedrab;
+}
+
+/* Container for centering the input area and table */
+.container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+}
+
+/* Input Area Styling */
+.input-area {
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+input {
+  width: 80%; /* Responsive width */
+  max-width: 500px; /* Maximum width for input */
+  height: 35px;
+  border: none;
+  border-radius: 14px;
+  padding: 15px;
+  margin-bottom: 25px; /* Spacing between input and button */
+  font-size: 16px;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid rgb(0, 90, 0);
+  background-color: rgb(0, 90, 0);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  max-width: 750px;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: whitesmoke;
+}
+
+.table th, .table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px dashed black;
+}
+
+.table th:nth-child(4) {
+  text-align: center;
+}
+
+th {
+  font-size: 18px;
+  padding: 14px;
+  text-align: center;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Styling for Buttons */
+.btn-completed, .btn-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+/*  color: white;
+  display: inline-block;*/
+}
+
+.btn-completed {
+  /*background-color: #d4edda; Light green background for completed */
+  color: #155724; /* Dark green text for completed */
+}
+
+.btn-remove {
+ /* background-color: #f8d7da;  Light red background for delete */
+  color: #721c24; /* Dark red text for delete */
+}
+
+/* Disabled buttons */
+.disabled {
+  background-color: gray;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+/* FontAwesome icon styles */
+.fas {
+  margin-right: 2px; /* Add space between icon and text */
+  font-size: 16px;
+}
+
+/* Disable Delete Button for Completed Tasks */
+.btn-remove.disabled {
+  pointer-events: none; /* Disable click events */
+  opacity: 0.5; /* Make it visually appear disabled */
+  background-color: #e0e0e0; /* Gray background */
+  color: #a0a0a0; /* Gray text */
+}
+
+.btn-remove.disabled i {
+  color: #a0a0a0; /* Gray icon */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
   .heading {
-    text-decoration: none;
-    color: white;
-    letter-spacing: 1px;
-    font-size: 30px;
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    font-size: 24px; /* Smaller heading on mobile */
   }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-  }
-  
-  .input-area {
-    margin-bottom: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
+
   input {
-    width: 100%;
-    max-width: 500px;
-    height: 30px;
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
+    width: 80%; /* Smaller input width on mobile */
   }
-  
+
   .btn {
-    width: 100px;
-    height: 40px;
-    border-radius: 50px;
-    border: 1px solid rgb(0, 90, 0);
-    color: white;
-    font-weight: 900;
-    background-color: rgb(0, 90, 0);
-    text-align: center;
+    width: 80px; /* Smaller button on mobile */
   }
-  
+
   table {
-    width: 100%;
-    max-width: 700px;
-    border: 0.5px solid black;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: whitesmoke;
+    width: 100%; /* Make table full width */
+    font-size: 14px; /* Reduce table font size */
   }
-  
-  th {
-    font-size: 20px;
-    text-align: start;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
+  th, td {
+    padding: 8px; /* Increase padding for touch-friendly design */
   }
-  
-  th:nth-child(4) {
-    text-align: center;
-  }
-  
-  tr.border-bottom td {
-    border-bottom: 1pt dashed black;
-  }
-  
-  tbody {
-    padding: 3px;
-    font-size: 15px;
-  }
-  
-  td {
-    padding: 5px;
-  }
-  
+
   .action {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    flex-direction: column; /* Stack action buttons vertically on mobile */
+    gap: 10px;
   }
-  
-  .btn-completed, .btn-remove {
-    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 18px; /* Even smaller font for very small screens */
   }
-  
-  /* Responsive Styles */
-  @media screen and (max-width: 768px) {
-    .heading {
-      font-size: 24px; /* Smaller heading on mobile */
-    }
-  
-    input {
-      width: 80%; /* Smaller input width on mobile */
-    }
-  
-    .btn {
-      width: 80px; /* Smaller button on mobile */
-    }
-  
-    table {
-      width: 100%; /* Make table full width */
-      font-size: 14px; /* Reduce table font size */
-    }
-  
-    th, td {
-      padding: 8px; /* Increase padding for touch-friendly design */
-    }
-  
-    .action {
-      flex-direction: column; /* Stack action buttons vertically on mobile */
-      gap: 10px;
-    }
+
+  input {
+    width: 100%; /* Full width input */
   }
-  
-  @media screen and (max-width: 480px) {
-    .heading {
-      font-size: 18px; /* Even smaller font for very small screens */
-    }
-  
-    input {
-      width: 100%; /* Full width input */
-    }
-  
-    .btn {
-      width: 90px; /* Adjust button width */
-    }
-  
-    table {
-      font-size: 12px; /* Further reduce table font size for small screens */
-    }
-  
-    .action {
-      flex-direction: column;
-      gap: 5px;
-    }
+
+  .btn {
+    width: 90px; /* Adjust button width */
   }
-  
+
+  table {
+    font-size: 12px; /* Further reduce table font size for small screens */
+  }
+
+  .action {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
