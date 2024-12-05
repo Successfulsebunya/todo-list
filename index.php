@@ -32,7 +32,9 @@ require 'config.php';
           <th>#</th>
           <th>Tasks</th>
           <th>Status</th>
+          <th>Date Closed</th>
           <th>Action</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -51,13 +53,16 @@ require 'config.php';
             <td>
               <?php echo htmlspecialchars($fetch['status']); ?>
             </td>
+            <td>
+        <?php echo $fetch['status'] == 'Done' ? htmlspecialchars($fetch['date_completed']) : '—'; ?>
+      </td>
             <td colspan="2" class="action">
               <?php if ($fetch['status'] != "Done") { ?>
-                <a href="update_task.php?task_id=<?= $fetch['task_id'] ?>" class="btn-completed">
-                  Done
+                <a href="update_task.php?task_id=<?= $fetch['task_id'] ?>" class="btn-completed" title="Mark as Done">Done
+                  
                 </a>
-                <a href="delete_task.php?task_id=<?= $fetch['task_id'] ?>" class="btn-remove">
-                  Delete
+                <a href="delete_task.php?task_id=<?= $fetch['task_id'] ?>" class="btn-remove" title="Delete">
+                                Delete
                 </a>
               <?php } else { ?>
                 <a class="btn-completed disabled">Done</a>
