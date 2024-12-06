@@ -1,7 +1,20 @@
 
 /* Navigation bar styling */
+
+/* CSS for the logo */
+.logo {
+  text-align: center; /* Center the logo */
+  margin-bottom: 10px; /* Space between logo and nav */
+}
+
+.logo-image {
+  width: 200px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
 nav {
-  background-color: rgb(0, 90, 0); /* Color for the navigation background */
+  background-color: rgb(21, 7, 211); /* Color for the navigation background */
   width: 100%; /* Ensure it spans the full width of the page */
   padding: 7px 0; /* Add spacing inside the nav */
   margin: 15px auto; /* Remove any default margins */
@@ -33,7 +46,7 @@ body {
   justify-content: center; /* Horizontally center the content */
   align-items: center; /* Vertically center the content */
   height: 100vh; /* Full height of the viewport */
-  background-color: olivedrab;
+  background-color: rgb(12,126,203);
 }
 
 /* Container for centering the input area and table */
@@ -67,8 +80,8 @@ input {
   width: 100px;
   height: 40px;
   border-radius: 50px;
-  border: 1px solid rgb(0, 90, 0);
-  background-color: rgb(0, 90, 0);
+  border: 1px solid rgb(21, 7, 211);
+  background-color: rgb(21, 7, 211);
   color: white;
   font-weight: 700;
   cursor: pointer;

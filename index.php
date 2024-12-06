@@ -14,7 +14,10 @@ require 'config.php';
 <body>
 
   <div class="container">
-
+    <!-- Logo Image Before Nav -->
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo" class="logo-image">
+    </div>
   <nav>
     <a class="heading" href="#">To Do List</a>
   </nav>

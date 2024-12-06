@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2024 at 03:14 PM
+-- Generation Time: Dec 05, 2024 at 01:41 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -273,7 +273,7 @@ CREATE TABLE `pma__userconfig` (
 --
 
 INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2024-12-04 13:36:09', '{\"Console\\/Mode\":\"collapse\",\"NavigationWidth\":218}');
+('root', '2024-12-05 08:25:15', '{\"Console\\/Mode\":\"collapse\",\"NavigationWidth\":218}');
 
 -- --------------------------------------------------------
 
@@ -481,19 +481,9 @@ USE `todo`;
 CREATE TABLE `task` (
   `task_id` int(10) NOT NULL,
   `task` varchar(250) NOT NULL,
-  `status` varchar(30) NOT NULL
+  `status` varchar(30) NOT NULL,
+  `date_completed` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `task`
---
-
-INSERT INTO `task` (`task_id`, `task`, `status`) VALUES
-(1, 'Read an article on React.js', 'Done'),
-(2, 'Organize a meeting', 'Pending'),
-(3, 'Meeting with KM', 'Pending'),
-(4, 'Sunil Printer', 'Pending'),
-(5, 'Sample', 'Pending');
 
 --
 -- Indexes for dumped tables
@@ -513,7 +503,7 @@ ALTER TABLE `task`
 -- AUTO_INCREMENT for table `task`
 --
 ALTER TABLE `task`
-  MODIFY `task_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `task_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
